@@ -3,329 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Rivers's Independent Bookstore</title>
-    <meta name="description" content="Independent books by Alex Rivers - No corporate gatekeepers, no ISBN tyranny">
+    <title>Alex Rivers - Professional Digital Artist</title>
+    <meta name="description" content="Independent digital artist creating custom illustrations, logo designs, and visual identities for creators who want professional art without corporate agency markup.">
     
-    <!-- No ISBN metadata - complete independence -->
+    <!-- Premium Template Styles -->
     <style>
-        /* SpiralLogic-enhanced emotional design */
-        :root {
-            --creator-primary: #2E5266;
-            --healing-green: #4A9B8E; 
-            --support-blue: #6B9BD2;
-            --gentle-purple: #A8B2D1;
-        }
         
-        body {
-            font-family: Georgia, serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, var(--creator-primary) 0%, var(--gentle-purple) 100%);
-            color: #333;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; line-height: 1.6; }
         
-        .header {
-            background: rgba(255,255,255,0.95);
+        .premium-header {
             padding: 2rem;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
         }
         
-        .independence-badge {
-            background: var(--healing-green);
-            color: white;
+        .creator-name { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .creator-tagline { font-size: 1.2rem; opacity: 0.9; }
+        .premium-badge {
+            background: rgba(255,255,255,0.2);
             padding: 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
             display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
         }
         
-        .book-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        .premium-content { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        .premium-footer { 
+            background: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 2rem; 
+            margin-top: 4rem; 
         }
+        .premium-footer a { color: #4CAF50; }
         
-        .book-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .book-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .werner-health-widget {
+        .werner-health-widget, .spirallogic-support {
             position: fixed;
             bottom: 20px;
-            right: 20px;
-            background: var(--support-blue);
-            color: white;
             padding: 1rem;
             border-radius: 50px;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             z-index: 1000;
-        }
-        
-        .spirallogic-support {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: var(--healing-green);
             color: white;
-            padding: 1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            z-index: 1000;
         }
         
-        .epub-reader {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            z-index: 9999;
+        .werner-health-widget { 
+            right: 20px; 
+            background: #1976D2; 
         }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <div class="independence-badge">📚 Independent Creator - No Corporate Control</div>
-        <h1>Alex Rivers</h1>
-        <p>Independent fantasy author writing stories that heal trauma through magical realism</p>
-        <p><strong>🏴 No ISBNs Required - Complete Creative Sovereignty 🏴</strong></p>
-    </header>
-    
-    <main>
-        <div class="book-grid">
-
-            <div class="book-card" data-book-id="shadows-of-healing">
-                <h3>Shadows of Healing</h3>
-                <p><strong>Genre:</strong> Fantasy</p>
-                <p>A magical realism novel about a young healer who discovers that trauma can be transformed into power</p>
-                
-                <!-- SpiralLogic emotional tags -->
-                <div class="emotional-tags">
-                    <strong>Emotional vibes:</strong> 
-                    healing, empowering, magical
-                </div>
-                
-                <div class="book-actions">
-                    <button onclick="previewBook('shadows-of-healing')" class="preview-btn">
-                        📖 Preview
-                    </button>
-                    <button onclick="buyBook('shadows-of-healing', 14.99)" class="buy-btn">
-                        💳 Buy $14.99
-                    </button>
-                    <button onclick="downloadSample('shadows-of-healing')" class="sample-btn">
-                        ⬇️ Free Sample
-                    </button>
-                </div>
-                
-                <!-- Available formats -->
-                <p><small>Available in: EPUB, PDF</small></p>
-            </div>
-
-            <div class="book-card" data-book-id="the-wounded-crown">
-                <h3>The Wounded Crown</h3>
-                <p><strong>Genre:</strong> Fantasy</p>
-                <p>When a kingdom's magic is broken by collective trauma, one person must heal a nation</p>
-                
-                <!-- SpiralLogic emotional tags -->
-                <div class="emotional-tags">
-                    <strong>Emotional vibes:</strong> 
-                    collective healing, leadership, courage
-                </div>
-                
-                <div class="book-actions">
-                    <button onclick="previewBook('the-wounded-crown')" class="preview-btn">
-                        📖 Preview
-                    </button>
-                    <button onclick="buyBook('the-wounded-crown', 16.99)" class="buy-btn">
-                        💳 Buy $16.99
-                    </button>
-                    <button onclick="downloadSample('the-wounded-crown')" class="sample-btn">
-                        ⬇️ Free Sample
-                    </button>
-                </div>
-                
-                <!-- Available formats -->
-                <p><small>Available in: EPUB, PDF</small></p>
-            </div>
-
-            <div class="book-card" data-book-id="whispers-from-void">
-                <h3>Whispers From the Void</h3>
-                <p><strong>Genre:</strong> Dark Fantasy</p>
-                <p>A short story collection exploring the space between pain and transformation</p>
-                
-                <!-- SpiralLogic emotional tags -->
-                <div class="emotional-tags">
-                    <strong>Emotional vibes:</strong> 
-                    deep, transformative, brave
-                </div>
-                
-                <div class="book-actions">
-                    <button onclick="previewBook('whispers-from-void')" class="preview-btn">
-                        📖 Preview
-                    </button>
-                    <button onclick="buyBook('whispers-from-void', 12.99)" class="buy-btn">
-                        💳 Buy $12.99
-                    </button>
-                    <button onclick="downloadSample('whispers-from-void')" class="sample-btn">
-                        ⬇️ Free Sample
-                    </button>
-                </div>
-                
-                <!-- Available formats -->
-                <p><small>Available in: EPUB, PDF</small></p>
-            </div>
-
-        </div>
-    </main>
-    
-    <!-- Werner Medical Knowledge Integration - Universal Access -->
-    <div class="werner-health-widget" onclick="openWernerHealth()">
-        🏥 Health Support
-    </div>
-    
-    <!-- SpiralLogic Creator Support -->
-    <div class="spirallogic-support" onclick="openCreatorSupport()">
-        🌱 Creator Care
-    </div>
-    
-    <!-- Werner Health Modal -->
-    <div id="werner-modal" class="werner-modal" style="display: none;">
-        <div class="modal-content">
-            <span onclick="closeWernerHealth()" style="float: right; cursor: pointer; font-size: 1.5rem;">&times;</span>
-            <h2>🏥 Community Health Support</h2>
-            <p><em>"Medical knowledge belongs to the people" - David Werner</em></p>
-            
-            <div class="health-options">
-                <button onclick="accessHealthGuide()">📖 Where There Is No Doctor</button>
-                <button onclick="emergencyProtocols()">🚨 Emergency Protocols</button>
-                <button onclick="basicFirstAid()">🏥 Basic First Aid</button>
-                <button onclick="findLocalHelp()">📍 Find Local Healthcare</button>
-            </div>
-            
-            <p><small>Free community health information available to everyone, always.</small></p>
-            <p><strong>Werner's medical knowledge is never sold - always free as he intended.</strong></p>
-        </div>
-    </div>
-    
-    <!-- EPUB Reader Integration -->
-    <div id="epub-reader" class="epub-reader">
-        <div class="reader-controls">
-            <button onclick="closeReader()">← Back to Store</button>
-            <div class="reader-title"></div>
-        </div>
-        <div class="reader-content"></div>
-    </div>
-    
-    <script>
-        // Creator Store Functions
-        function previewBook(bookId) {
-            // Open EPUB reader with book preview
-            console.log('Opening preview for book:', bookId);
-            document.getElementById('epub-reader').style.display = 'block';
-            // Load EPUB preview here
+        .spirallogic-support { 
+            left: 20px; 
+            background: #4CAF50; 
         }
         
-        function buyBook(bookId, price) {
-            // Direct payment processing - creator keeps 100%
-            const paymentData = {
-                bookId: bookId,
-                price: price,
-                creator: 'Alex Rivers',
-                store: window.location.href
-            };
-            
-            // Integrate with Stripe, PayPal, or crypto
-            console.log('Processing payment:', paymentData);
-            alert(`Processing $` + price + ` payment for creator. No middleman fees!`);
-        }
-        
-        function downloadSample(bookId) {
-            // Download free sample
-            console.log('Downloading sample:', bookId);
-            alert('Free sample downloading - No registration required!');
-        }
-        
-        function closeReader() {
-            document.getElementById('epub-reader').style.display = 'none';
-        }
-        
-        // Werner Health Integration Functions
-        function openWernerHealth() {
-            document.getElementById('werner-modal').style.display = 'block';
-        }
-        
-        function closeWernerHealth() {
-            document.getElementById('werner-modal').style.display = 'none';
-        }
-        
-        function accessHealthGuide() {
-            // Link to Werner health knowledge
-            window.open('/werner-health-guide', '_blank');
-        }
-        
-        function emergencyProtocols() {
-            window.open('/werner-emergency-protocols', '_blank');
-        }
-        
-        function basicFirstAid() {
-            window.open('/werner-first-aid', '_blank');
-        }
-        
-        function findLocalHelp() {
-            // Geolocation-based local healthcare finder
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    const lat = position.coords.latitude;
-                    const lon = position.coords.longitude;
-                    window.open(`/find-healthcare?lat=${lat}&lon=${lon}`, '_blank');
-                });
-            } else {
-                window.open('/find-healthcare', '_blank');
-            }
-        }
-        
-        // SpiralLogic Creator Support Functions
-        function openCreatorSupport() {
-            // Emotional support for the creator
-            const supportOptions = [
-                "🌱 Feeling creative block?",
-                "💚 Need encouragement?", 
-                "🔥 Celebrating a success?",
-                "🤲 Want community connection?"
-            ];
-            
-            const choice = prompt("Creator support available:\n" + supportOptions.join("\n") + "\n\nWhat do you need?");
-            
-            if (choice) {
-                // SpiralLogic processing
-                console.log('Creator support requested:', choice);
-                alert('🌟 Your creativity matters. The community supports you. Keep creating!');
-            }
-        }
-        
-        // Analytics-free visitor tracking (just for creator benefit)
-        console.log('Independent bookstore loaded. No corporate surveillance here! 🏴');
-    </script>
-    
-    <style>
         .werner-modal {
             position: fixed;
             z-index: 10000;
@@ -345,42 +79,332 @@
             max-width: 500px;
         }
         
-        .health-options button {
-            display: block;
-            width: 100%;
-            margin: 0.5rem 0;
-            padding: 1rem;
-            background: var(--support-blue);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        
-        .health-options button:hover {
-            opacity: 0.9;
-        }
-        
-        .preview-btn, .buy-btn, .sample-btn {
-            margin: 0.5rem;
-            padding: 0.75rem 1rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        
-        .preview-btn { background: var(--gentle-purple); color: white; }
-        .buy-btn { background: var(--creator-primary); color: white; }
-        .sample-btn { background: var(--healing-green); color: white; }
-        
-        .emotional-tags {
-            background: #f0f8ff;
-            padding: 0.5rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            font-style: italic;
-        }
+            :root {
+                --primary-color: #6A1B9A;
+                --secondary-color: #8E24AA;
+                --accent-color: #AB47BC;
+                --highlight-color: #E1BEE7;
+            }
+            
+            .digital_artist-theme {
+                background: linear-gradient(to bottom, #F3E5F5, #E1BEE7);
+                color: #4A148C;
+            }
+            
+            .portfolio-gallery { padding: 2rem 0; }
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+                margin: 1rem 0;
+            }
+            .portfolio-item {
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(106, 27, 154, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .portfolio-item:hover { transform: translateY(-5px); }
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin: 2rem 0;
+            }
+            .service-card {
+                background: white;
+                border-radius: 15px;
+                padding: 1.5rem;
+                box-shadow: 0 4px 15px rgba(106, 27, 154, 0.1);
+                border-left: 4px solid var(--primary-color);
+            }
+            .commission-btn, .portfolio-btn {
+                margin: 0.5rem;
+                padding: 0.75rem 1rem;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .commission-btn { background: var(--primary-color); color: white; }
+            .portfolio-btn { background: var(--highlight-color); color: var(--primary-color); }
+            
     </style>
+    
+    <!-- Fort Creator Liberation Platform Attribution -->
+    <meta name="generator" content="Fort Creator Liberation Platform - Premium Template">
+    <link rel="canonical" href="alexrivers.art">
+</head>
+<body class="digital_artist-theme">
+    <!-- Premium Template Header -->
+    <header class="premium-header">
+        <div class="creator-branding">
+            <h1 class="creator-name">Alex Rivers</h1>
+            <p class="creator-tagline">Independent digital artist creating custom illustrations, logo designs, and visual identities for creators who want professional art without corporate agency markup.</p>
+            <div class="premium-badge">Premium Template by Fort Liberation Platform</div>
+        </div>
+    </header>
+    
+    <main class="premium-content">
+        
+        <section class="hero-section art-showcase">
+            <h2>🎨 Professional Digital Art & Design Services</h2>
+            <p>Independent digital artist creating custom visual solutions without corporate agency markup.</p>
+        </section>
+        
+        <section class="portfolio-gallery">
+            <h3>✨ Featured Portfolio</h3>
+            <div class="gallery-grid">
+                <div class="portfolio-item">📱 Logo Design</div>
+                <div class="portfolio-item">👤 Character Illustration</div>
+                <div class="portfolio-item">📚 Book Cover Design</div>
+                <div class="portfolio-item">📱 Social Media Branding</div>
+            </div>
+        </section>
+        
+        <section class="services-showcase">
+            <h3>🛠️ Services & Commissions</h3>
+            <div class="services-grid">
+        
+            <div class="service-card" data-product-id="custom-logo-design">
+                <h4>Custom Logo Design</h4>
+                <p class="price">$149.99</p>
+                <p>Professional logo design that captures your brand's essence. Perfect for independent creators, small businesses, and creative entrepreneurs.</p>
+                
+                <div class="service-features">
+                    <strong>Includes:</strong>
+                    <ul>
+                        <li>3 initial concepts</li><li>2 revision rounds</li><li>Final files in multiple formats</li><li>Commercial use rights</li><li>Style guide</li>
+                    </ul>
+                </div>
+                
+                <div class="spirallogic-tags">
+                    <strong>Style:</strong> professional, unique, brand-building
+                </div>
+                
+                <div class="turnaround-info">
+                    <strong>Turnaround:</strong> 5-7 days
+                </div>
+                
+                <div class="service-actions">
+                    <button onclick="requestCommission('custom-logo-design', 149.99)" class="commission-btn">
+                        💼 Request Commission
+                    </button>
+                    <button onclick="viewPortfolio('custom-logo-design')" class="portfolio-btn">
+                        🖼️ View Samples
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-product-id="character-illustration">
+                <h4>Character Illustration Commission</h4>
+                <p class="price">$89.99</p>
+                <p>Custom character illustration for your stories, games, or personal projects. Detailed digital art that brings your vision to life.</p>
+                
+                <div class="service-features">
+                    <strong>Includes:</strong>
+                    <ul>
+                        <li>Full character design</li><li>High-resolution digital file</li><li>Commercial rights</li><li>Character reference sheet</li>
+                    </ul>
+                </div>
+                
+                <div class="spirallogic-tags">
+                    <strong>Style:</strong> creative, storytelling, personalized
+                </div>
+                
+                <div class="turnaround-info">
+                    <strong>Turnaround:</strong> 7-10 days
+                </div>
+                
+                <div class="service-actions">
+                    <button onclick="requestCommission('character-illustration', 89.99)" class="commission-btn">
+                        💼 Request Commission
+                    </button>
+                    <button onclick="viewPortfolio('character-illustration')" class="portfolio-btn">
+                        🖼️ View Samples
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-product-id="book-cover-design">
+                <h4>Book Cover Design</h4>
+                <p class="price">$199.99</p>
+                <p>Eye-catching book cover design that makes your book stand out. Specialized in indie author needs and genre conventions.</p>
+                
+                <div class="service-features">
+                    <strong>Includes:</strong>
+                    <ul>
+                        <li>Front cover design</li><li>Back cover layout</li><li>Spine design</li><li>eBook version</li><li>Print-ready files</li>
+                    </ul>
+                </div>
+                
+                <div class="spirallogic-tags">
+                    <strong>Style:</strong> professional, genre-aware, marketable
+                </div>
+                
+                <div class="turnaround-info">
+                    <strong>Turnaround:</strong> 7-14 days
+                </div>
+                
+                <div class="service-actions">
+                    <button onclick="requestCommission('book-cover-design', 199.99)" class="commission-btn">
+                        💼 Request Commission
+                    </button>
+                    <button onclick="viewPortfolio('book-cover-design')" class="portfolio-btn">
+                        🖼️ View Samples
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-product-id="social-media-branding-pack">
+                <h4>Social Media Branding Pack</h4>
+                <p class="price">$129.99</p>
+                <p>Complete visual identity for your social media presence. Consistent branding across all platforms.</p>
+                
+                <div class="service-features">
+                    <strong>Includes:</strong>
+                    <ul>
+                        <li>Profile picture design</li><li>Cover/banner images</li><li>Post templates (5 designs)</li><li>Story highlight covers</li><li>Brand color palette</li>
+                    </ul>
+                </div>
+                
+                <div class="spirallogic-tags">
+                    <strong>Style:</strong> cohesive, professional, platform-ready
+                </div>
+                
+                <div class="turnaround-info">
+                    <strong>Turnaround:</strong> Contact for timeline
+                </div>
+                
+                <div class="service-actions">
+                    <button onclick="requestCommission('social-media-branding-pack', 129.99)" class="commission-btn">
+                        💼 Request Commission
+                    </button>
+                    <button onclick="viewPortfolio('social-media-branding-pack')" class="portfolio-btn">
+                        🖼️ View Samples
+                    </button>
+                </div>
+            </div>
+            
+            <div class="service-card" data-product-id="art-print-collection">
+                <h4>Limited Edition Art Prints</h4>
+                <p class="price">$24.99</p>
+                <p>High-quality art prints of original digital paintings. Limited edition runs support independent art.</p>
+                
+                <div class="service-features">
+                    <strong>Includes:</strong>
+                    <ul>
+                        <li>8x10 inch print</li><li>Certificate of authenticity</li><li>Protective packaging</li><li>Artist signature</li>
+                    </ul>
+                </div>
+                
+                <div class="spirallogic-tags">
+                    <strong>Style:</strong> collectible, original, supporting-artist
+                </div>
+                
+                <div class="turnaround-info">
+                    <strong>Turnaround:</strong> Contact for timeline
+                </div>
+                
+                <div class="service-actions">
+                    <button onclick="requestCommission('art-print-collection', 24.99)" class="commission-btn">
+                        💼 Request Commission
+                    </button>
+                    <button onclick="viewPortfolio('art-print-collection')" class="portfolio-btn">
+                        🖼️ View Samples
+                    </button>
+                </div>
+            </div>
+            
+            </div>
+        </section>
+        
+        <section class="artist-process">
+            <h3>🎯 Commission Process</h3>
+            <div class="process-steps">
+                <div class="step">
+                    <h4>1. Initial Consultation</h4>
+                    <p>Free consultation to understand your vision</p>
+                </div>
+                <div class="step">
+                    <h4>2. Concept Development</h4>
+                    <p>Create initial concepts for your approval</p>
+                </div>
+                <div class="step">
+                    <h4>3. Refinement & Delivery</h4>
+                    <p>Polish to perfection and deliver final files</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="client-testimonials">
+            <h3>💫 Client Love</h3>
+            <div class="testimonials">
+        <blockquote>"Alex designed my book cover and it's getting so many compliments! Sales increased 40% after the redesign."</blockquote><blockquote>"The logo perfectly captures my brand essence. Professional quality at indie creator prices."</blockquote><blockquote>"Best character artist I've worked with. Brought my protagonist to life exactly as I imagined."</blockquote><blockquote>"Social media branding pack transformed my online presence. Followers doubled in 3 months."</blockquote>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Always Include Werner Health Integration -->
+    <div class="werner-health-widget" onclick="openWernerHealth()">
+        🏥 Community Health
+    </div>
+    
+    <!-- SpiralLogic Creator Support -->
+    <div class="spirallogic-support" onclick="openCreatorSupport()">
+        🌱 Creator Care
+    </div>
+    
+    <!-- Premium Template Footer -->
+    <footer class="premium-footer">
+        <p>Powered by <a href="https://thefortthatholds.org">Fort Creator Liberation Platform</a></p>
+        <p>Template License: Fort Creator Liberation License - Digital Artist</p>
+        <p>Creator Sovereignty Guaranteed - Zero Corporate Control</p>
+    </footer>
+    
+    <!-- Premium JavaScript Features -->
+    <script>
+        
+        function purchaseProduct(productId, price) {
+            console.log('Purchasing product:', productId, 'Price:', price);
+            alert(`Processing $${price} payment for ${productId}. 100% goes to creator!`);
+        }
+        
+        function bookConsultation() {
+            alert('Opening consultation booking calendar...');
+        }
+        
+        // Premium template tracking (creator benefit only)
+        console.log('Premium Fort Template Loaded - Creator sovereignty active!');
+        
+    </script>
+    
+    <!-- Werner Health Integration (Always Free) -->
+    <div id="werner-modal" class="werner-modal" style="display: none;">
+        <div class="modal-content">
+            <span onclick="closeWernerHealth()" style="float: right; cursor: pointer;">&times;</span>
+            <h2>🏥 Community Health Support</h2>
+            <p><em>"Medical knowledge belongs to the people" - David Werner</em></p>
+            <p>Free community health information available to everyone, always.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Werner and SpiralLogic integration (always included)
+        function openWernerHealth() {
+            document.getElementById('werner-modal').style.display = 'block';
+        }
+        
+        function closeWernerHealth() {
+            document.getElementById('werner-modal').style.display = 'none';
+        }
+        
+        function openCreatorSupport() {
+            alert('🌱 SpiralLogic Creator Support: You are valuable. Your work matters. Keep creating!');
+        }
+    </script>
 </body>
 </html>
